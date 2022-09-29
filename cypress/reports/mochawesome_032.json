@@ -1,0 +1,91 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-29T11:07:13.959Z",
+    "end": "2022-09-29T11:07:22.259Z",
+    "duration": 8300,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "da9d5f11-39e4-4e90-9ad7-e7beba361986",
+      "title": "",
+      "fullFile": "cypress\\e2e\\Test3.cy.js",
+      "file": "cypress\\e2e\\Test3.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "Google",
+          "fullTitle": "Google",
+          "timedOut": null,
+          "duration": 6010,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "//Google search\ncy.visit('https://www.google.com/', {\n  timeout: 4000\n});\ncy.xpath(\"//input[@class='gLFyf gsfi']\").type(\"data\");\ncy.xpath(\"//input[@value='Google Search'  and @aria-label='Google Search' ]/ancestor::div[@class='CqAVzb lJ9FBc']\").click();",
+          "err": {
+            "message": "CypressError: Cypress detected a cross origin error happened on page load:\n\n  > Blocked a frame with origin \"https://www.google.com\" from accessing a cross-origin frame.\n\nBefore the page load, you were bound to the origin policy:\n\n  > https://google.com\n\nA cross origin error happens when your application navigates to a new URL which does not match the origin policy above.\n\nA new URL does not match the origin policy if the 'protocol', 'port' (if specified), and/or 'host' (unless of the same superdomain) are different.\n\nCypress does not allow you to navigate to a different origin URL within a single test.\n\nYou may need to restructure some of your test code to avoid this problem.\n\nAlternatively you can also disable Chrome Web Security in Chromium-based browsers which will turn off this restriction by setting { chromeWebSecurity: false } in `cypress.config.js`.\n\nhttps://on.cypress.io/cross-origin-violation",
+            "estack": "CypressError: Cypress detected a cross origin error happened on page load:\n\n  > Blocked a frame with origin \"https://www.google.com\" from accessing a cross-origin frame.\n\nBefore the page load, you were bound to the origin policy:\n\n  > https://google.com\n\nA cross origin error happens when your application navigates to a new URL which does not match the origin policy above.\n\nA new URL does not match the origin policy if the 'protocol', 'port' (if specified), and/or 'host' (unless of the same superdomain) are different.\n\nCypress does not allow you to navigate to a different origin URL within a single test.\n\nYou may need to restructure some of your test code to avoid this problem.\n\nAlternatively you can also disable Chrome Web Security in Chromium-based browsers which will turn off this restriction by setting { chromeWebSecurity: false } in `cypress.config.js`.\n\nhttps://on.cypress.io/cross-origin-violation\n    at onPageLoadErr (https://www.google.com/__cypress/runner/cypress_runner.js:141239:76)\n    at HTMLIFrameElement.<anonymous> (https://www.google.com/__cypress/runner/cypress_runner.js:157094:15)\n    at HTMLIFrameElement.dispatch (https://www.google.com/__cypress/runner/cypress_runner.js:95479:27)\n    at elemData.handle (https://www.google.com/__cypress/runner/cypress_runner.js:95287:28)",
+            "diff": null
+          },
+          "uuid": "7eb8a1dc-b63a-4302-be81-49b11a6070c6",
+          "parentUUID": "da9d5f11-39e4-4e90-9ad7-e7beba361986",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "7eb8a1dc-b63a-4302-be81-49b11a6070c6"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 6010,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
